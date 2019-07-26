@@ -1,0 +1,75 @@
+{
+  "name": "ankle",
+  "private": true,
+  "scripts": {
+    "start": "vue-cli-service serve",
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "@stomp/stompjs": "^5.4.2",
+    "core-js": "^2.6.5",
+    "postprocessing": "^6.5.1",
+    "three": "^0.106.2",
+    "vue": "^2.6.10",
+    "vue-class-component": "^7.0.2",
+    "vue-property-decorator": "^8.1.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.9.0",
+    "@vue/cli-plugin-typescript": "^3.9.0",
+    "@vue/cli-service": "^3.9.0",
+    "babel-core": "7.0.0-bridge.0",
+    "ts-jest": "^23.0.0",
+    "typescript": "^3.4.3",
+    "vue-template-compiler": "^2.6.10",
+    "vue2-leaflet": "^2.1.1"
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "babel": {
+    "presets": [
+      [
+        "@vue/app"
+      ]
+    ]
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "vue",
+      "ts"
+    ],
+    "transform": {
+      "^.+\\.vue$": "vue-jest",
+      ".+\\.(css|styl|less|sass|scss|svg|png|jpg|ttf|woff|woff2)$": "jest-transform-stub",
+      "^.+\\.ts$": "ts-jest"
+    },
+    "transformIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "moduleNameMapper": {
+      "^@/(.*)$": "<rootDir>/src/$1"
+    },
+    "snapshotSerializers": [
+      "jest-serializer-vue"
+    ],
+    "watchPlugins": [
+      "jest-watch-typeahead/filename"
+    ],
+    "globals": {
+      "ts-jest": {
+        "babelConfig": true
+      }
+    }
+  }
+}

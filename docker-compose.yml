@@ -1,0 +1,20 @@
+version: "2.1"
+
+services:
+    postgres:
+        image: postgres:alpine
+        ports:
+          - 5432:5432
+        volumes:
+          - ./postgres/data:/var/lib/postgresql/data
+    rabbitmq:
+        build: rabbitmq
+        hostname: rabbitmq
+        environment:
+          - RABBITMQ_HIPE_COMPILE=1
+        volumes:
+          - ./rabbitmq/data:/var/lib/rabbitmq
+        ports:
+          - 15674:15674
+          - 15672:15672
+          - 5672:5672
