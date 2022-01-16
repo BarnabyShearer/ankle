@@ -1,27 +1,29 @@
-declare module 'postprocessing' {
+/* tslint:disable:max-classes-per-file */
+
+declare module "postprocessing" {
   import {Camera, Renderer, ImageLoader, Scene} from "three"
 
   class EffectComposer {
     public renderer: Renderer
-    constructor (render: Renderer)
-    addPass(pass: RenderPass|NormalPass|EffectPass): null
-    setSize(width: number, height: number): null
-    render (): null
+    constructor(render: Renderer)
+    public addPass(pass: RenderPass|NormalPass|EffectPass): null
+    public setSize(width: number, height: number): null
+    public render(): null
   }
-  class RenderPass{
+  class RenderPass {
+    public renderToScreen: boolean
     constructor(scene: Scene, camera: Camera)
-    renderToScreen: boolean
   }
-  class NormalPass{
+  class NormalPass {
     constructor(scene: Scene, camera: Camera, config: {resolutionScale?: number})
   }
-  class EffectPass{
-    constructor (camera: Camera, effect: SMAAEffect)
-    renderToScreen: boolean
+  class EffectPass {
+    public renderToScreen: boolean
+    constructor(camera: Camera, effect: SMAAEffect)
   }
-  class SMAAEffect{
-    constructor (search: HTMLImageElement, area: HTMLImageElement)
+  class SMAAEffect {
     public static areaImageDataURL: string
     public static searchImageDataURL: string
+    constructor(search: HTMLImageElement, area: HTMLImageElement)
   }
 }
