@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@stomp/stompjs": "^6.1.2",
-    "core-js": "^3.20.3",
+    "core-js": "^3.21.1",
     "postprocessing": "^6.23.5",
     "three": "^0.138.1",
     "vue": "^2.6.14",
